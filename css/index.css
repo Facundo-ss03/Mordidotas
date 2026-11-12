@@ -8,13 +8,27 @@
     font-family: fredoka;
 }
 
-nav {
+header {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: rgb(56, 104, 56);
+}
+
+nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-    height: 100px;
+}
+.logo {
+    grid-column: 2;
+}
+
+nav .logo {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
 }
 
 .menu-button-container {
@@ -36,11 +50,6 @@ nav {
     margin:  10px;
 }
 
-.logo {
-    grid-column: 2;
-    width: 75px;
-    margin: 10px 20px 10px 20px;
-}
 
 .banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),  url(/images/banner.jpg);
