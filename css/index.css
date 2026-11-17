@@ -10,8 +10,8 @@
 
 header {
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     background-color: rgb(56, 104, 56);
 }
 
@@ -23,22 +23,22 @@ nav {
 }
 .logo {
     grid-column: 2;
+    height: 60px;
 }
 
 nav .logo {
-    height: 50px;
     width: auto;
     max-width: 100%;
 }
 
 .menu-button-container {
-    margin: auto;
+    padding: 5px 0 0 25px;
 }
 
 .menu-button {
     grid-column: 3;
-    height: 100%;
     width: 40px;
+    max-width: 100%;
 }
 
 .buttons-container {
