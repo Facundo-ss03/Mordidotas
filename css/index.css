@@ -21,9 +21,6 @@ nav {
     align-items: center;
     justify-items: center;
 }
-.logo {
-    grid-column: 2;
-}
 
 nav .logo {
     height: 50px;
@@ -31,8 +28,18 @@ nav .logo {
     max-width: 100%;
 }
 
+.title-nav {
+    grid-column: 2;
+    color: white;
+}
+
+.logo-banner {
+    width: 30%;
+}
+
 .menu-button-container {
     margin: auto;
+    padding: 7px 0 0 25px;
 }
 
 .menu-button {
