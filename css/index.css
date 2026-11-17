@@ -8,6 +8,10 @@
     font-family: fredoka;
 }
 
+body {
+    background-color: #d7e6c1;
+}
+
 header {
     width: 100%;
     padding-top: 10px;
@@ -20,13 +24,7 @@ nav {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-}
-
-nav .logo {
-    height: 50px;
-    width: auto;
-    max-width: 100%;
-}
+} 
 
 .title-nav {
     grid-column: 2;
@@ -37,24 +35,9 @@ nav .logo {
     width: 30%;
 }
 
-.menu-button-container {
-    margin: auto;
-    padding: 7px 0 0 25px;
-}
-
-.menu-button {
-    grid-column: 3;
-    height: 100%;
-    width: 40px;
-}
-
 .buttons-container {
     color: white;
     font-weight: 600;
-}
-
-.buttons-nav {
-    margin:  10px;
 }
 
 
@@ -64,7 +47,7 @@ nav .logo {
     background-size: 100%;
     height: 100vw;
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 
     display: grid;
     align-items: center;
@@ -85,4 +68,45 @@ nav .logo {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
     color: #386838;
     text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.20);
+}
+
+.servicios {
+    display: grid;
+    justify-items: center;
+    padding: 20% 10% 20% 10%;
+}
+
+.item-ubicacion {
+
+}
+
+.item-postres {
+
+}
+
+.item-envios {
+
+}
+
+.item-consultas {
+
+}
+
+.items-grid {
+    display: grid;
+    width: 50%;
+    justify-content: center;
+    justify-items: center;
+}
+
+.items {
+    padding: 50px;
+    margin: 50px 50px 10px 50px;
+    background-color: #386838;
+    border-radius: 100%;
+    box-shadow: -2px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.item-descripciones {
+    text-align: center;
 }
