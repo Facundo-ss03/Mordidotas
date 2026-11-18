@@ -6,6 +6,10 @@
     <title>Mordidotas</title>
     <link rel="icon" type="image/png" href="/images/page-icon.png">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.4/dist/leaflet.css">
+	<script type="importmap">
+		{"imports": {"leaflet": "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.4/dist/leaflet.js"}}
+	</script>
 </head>
 <body>
     <header>
@@ -45,31 +49,69 @@
             </div>
         </div>
 
-        <section class="servicios">
-            <h2>Nuestros servicios</h2>
-            <div class="item-ubicacion items-grid">
-                <div class="items">
-                    <img src="/images/location_on_24dp_8DC53F_FILL0_wght400_GRAD0_opsz24.png" alt="ubicación">
+        <section class="seccion-servicios">
+            <div class="servicios">
+                <h2>Nuestros servicios</h2>
+                <div class="items-grid">
+                    <button class="items">
+                        <img src="/images/location_on_24dp_8DC53F_FILL0_wght400_GRAD0_opsz24.png" alt="ubicación">
+                    </button>
+                    <p class="item-descripciones">
+                        Estamos en la localidad de Bella Vista
+                        <br>¡Consultá los lugares a los que llegamos! 
+                    </p>
+                </div>
+                <div class="items-grid">
+                    <button class="items">
+                        <img src="/images/cookie_24dp_8DC53F_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                    </button>
+                    <p class="item-descripciones">
+                        Postres riquísimos para endulzar tu día
+                        <br>¡Solo en un par de mensajes! 
+                    </p>
+                </div>
+                <div class="items-grid">
+                    <button class="items">
+                        <img src="/images/two_wheeler_24dp_8DC53F_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                    </button>
+                    <p class="item-descripciones">
+                        Envíos por todo Bella Vista y alrededores.
+                    </p>
+                </div>
+                <div class="items-grid">
+                    <button class="items">
+                        <img src="/images/mobile_chat_24dp_8DC53F_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                    </button>
+                    <p class="item-descripciones">
+                        Contactate con nosotros por nuestras redes para pedir tu antojo del día. 
+                    </p>
                 </div>
             </div>
-            <div class="item-postres items-grid">
-                <div class="items">
-                    <img src="/images/cookie_24dp_8DC53F_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                </div>
-            </div>
-            <div class="item-envios items-grid">
-                <div class="items">
-                    <img src="/images/two_wheeler_24dp_8DC53F_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                </div>
-            </div>
-            <div class="item-consultas items-grid">
-                <div class="items">
-                    <img src="/images/mobile_chat_24dp_8DC53F_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                </div>
-                <p class="item-descripciones">
-                    Contactate con nosotros por nuestras redes para pedir tu antojo del día. 
-                </p>
-            </div>
+        </section>
+
+        <section class="seccion-mapa">
+
+            <h2 class="titulo-mapa">Zonas a las que llegamos</h2>
+            <div id="map" style="height: 400px; width: 100%;"></div>
+            <script type="module">
+                
+                import {LeafletMap, TileLayer, Polygon} from 'leaflet';
+                const map = new LeafletMap('map').setView([-34.5682, -58.69], 12);
+                new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(map);
+
+                const polygon = new Polygon([
+                    [-34.56612928453059, -58.65572729146741],
+                    [-34.60588900342953, -58.71292325840455],
+                    [-34.589883184202996, -58.73548082918024],
+                    [-34.55148150551305, -58.72180397911349],
+                    [-34.53746116623363, -58.74077342927866],
+                    [-34.518382310504585, -58.721126193233026],
+                ]).addTo(map);
+
+            </script>
         </section>
     </main>
 </body>
