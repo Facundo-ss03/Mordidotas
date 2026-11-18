@@ -8,6 +8,10 @@
     font-family: fredoka;
 }
 
+body {
+    background-color: #d7e6c1e8;
+}
+
 header {
     width: 100%;
     padding-top: 8px;
@@ -20,36 +24,21 @@ nav {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-}
-.logo {
+} 
+
+.title-nav {
     grid-column: 2;
-    height: 60px;
+    color: white;
 }
 
-nav .logo {
+.logo {
     width: auto;
     max-width: 100%;
 }
 
-.menu-button-container {
-    padding: 5px 0 0 25px;
+.logo-banner {
+    width: 30%;
 }
-
-.menu-button {
-    grid-column: 3;
-    width: 40px;
-    max-width: 100%;
-}
-
-.buttons-container {
-    color: white;
-    font-weight: 600;
-}
-
-.buttons-nav {
-    margin:  10px;
-}
-
 
 .banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),  url(/images/banner.jpg);
@@ -57,7 +46,7 @@ nav .logo {
     background-size: 100%;
     height: 100vw;
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 
     display: grid;
     align-items: center;
@@ -78,4 +67,48 @@ nav .logo {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
     color: #386838;
     text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.20);
+}
+
+.seccion-servicios {
+    width: 100%;
+    padding: 20% 0% 20% 0%;
+    justify-items: center;
+}
+
+.servicios {
+    width: 300px;
+    display: grid;
+    justify-items: center;
+}
+
+.items-grid {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+.items {
+    max-width: 120px;
+    max-height: 120px;
+    padding: 40px;
+    margin: 50px 50px 10px 50px;
+    background-color: #386838;
+    border-radius: 100%;
+    border: none;
+    box-shadow: -2px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.item-descripciones {
+    text-align: center;
+}
+
+.seccion-mapa {
+    justify-items: center;
+    padding: 2.5%;
+    background-color: #386838;
+}
+
+.titulo-mapa {
+    color: white;
+    padding: 40px 20px 40px 20px;
 }
